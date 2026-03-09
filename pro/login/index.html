@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:linear-gradient(to bottom, #5518b6, #ffffff);
+            margin:0%;
+            text-align: center;
+            font-family: cursive;
+            font-size: large;
+            font-weight: bold;
+            height:100vh;
+        }
+        label{
+            font-size: 25px;
+            padding: 10px;
+            margin:5px;
+        }
+        input{
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #f1f1f1;
+            margin-bottom: 15px;
+        }
+        .card{
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            width: 350px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        button:hover{
+            background-color: orange;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Login</h1>
+        <div>
+            <label>Username</label>
+            <br>
+            <input type="text" id="username" placeholder="Enter username">
+            <br>
+            <label>Password</label>
+            <br>
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+        <div>
+            <button id="login">Login</button>
+            <button id="cancel">Cancel</button>
+        </div>
+    </div>
+    <h4 id="result"></h4>    
+</body>
+</html>

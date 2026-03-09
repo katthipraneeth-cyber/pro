@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Praneeth Reddy | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #4facfe, #25d928);
+        }
+
+        /* HEADER */
+        header {
+            background: #d91313;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .project-card {
+            background: #e6f4ff;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        /* PROFILE */
+        .profile {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .profile img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #4facfe;
+        }
+
+        .profile h2 {
+            margin-top: 15px;
+            color: #222;
+        }
+
+        .profile p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* CONTENT */
+        .content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .content h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .content p {
+            font-size: 17px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .details {
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        .details li {
+            list-style: none;
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .details li::before {
+            content: "✔ ";
+            color: green;
+            font-weight: bold;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            margin: 25px 0;
+            padding: 14px 32px;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        /* PROJECT SECTIONS */
+        .project-section {
+            margin-top: 30px;
+        }
+
+        .project-section h4 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: #d91313;
+            border-bottom: 2px solid #d91313;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .project-links a {
+            background: white;
+            color: #111;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .project-links a:hover {
+            background: #111;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .project-card {
+                padding: 25px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Project Portfolio</h1>
+    <p>Web Developer | Student</p>
+</header>
+
+<div class="container">
+    <div class="project-card">
+
+        <!-- PROFILE -->
+        <div class="profile">
+            <img src="Myphoto.png" alt="My Photo">
+            <h2>Praneeth Reddy</h2>
+            <p>Frontend Web Developer</p>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+            <h3>Car Showroom Website</h3>
+            <p>
+                A modern, responsive bike showroom website built using HTML, CSS, and JavaScript.
+                Users can browse bikes, view prices, and book their favorite bike online.
+            </p>
+
+            <ul class="details">
+                <li><b>Technologies:</b> HTML, CSS, JavaScript</li>
+                <li><b>Features:</b> Bike listings, booking option, responsive design</li>
+                <li><b>Project Type:</b> College Mini Project</li>
+            </ul>
+
+            <a href="bikeshoroom.html" class="btn">View Project</a>
+
+            <!-- HTML PROJECTS -->
+            <div class="project-section">
+                <h4>HTML Projects</h4>
+                <div class="project-links">
+                    <a href="Table.html" target="_blank">Table</a>
+                    <a href="v.html" target="_blank">Forms</a>
+                    <a href="media.html" target="_blank">Media</a>
+                    <a href="food-oder/index.html" target="_blank">menu items</a>
+                    <a href="login/index.html" target="_blank">Login Page</a>
+                    <a href="card1/index.html" target="_blank">Card UI</a>
+                </div>
+            </div>
+
+            <!-- CSS PROJECTS -->
+            <div class="project-section">
+                <h4>CSS Projects</h4>
+                <div class="project-links">
+                    <a href="Nav.html" target="_blank">Navbar</a>
+                    <a href="StylingDemo/index.html" target="_blank">Styling Demo</a>
+                    <a href="List_images_project/index.html" target="_blank">List & Images</a>
+                    <a href="klh.html/klh.html" target="_blank">KLH Collage</a>
+                    <a href="temp/index.html" target="_blank">temp&weight</a>
+                </div>
+            </div>
+
+            <!-- JS PROJECTS -->
+            <div class="project-section">
+                <h4>JavaScript Projects</h4>
+                <div class="project-links">
+                    <a href="calculator.html" target="_blank">Calculator</a>
+                    <a href="game.html" target="_blank">Mini Game</a>
+                    <a href="counter.html" target="_blank">Counter</a>
+                    <a href="digiclock.html" target="_blank">Digital Clock</a>
+                     <a href="callback/index.html" target="_blank">Callback</a>
+                     <a href="ani.html" target="_blank">Animations</a>
+                </div>
+            </div>
+
+        </div>1
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Praneeth Reddy | Portfolio Website</p>
+</footer>
+
+</body>
+</html>

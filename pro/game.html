@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mouse Escape Game</title>
+
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background: #111;
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+
+    #score {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 20px;
+    }
+
+    #player {
+        width: 15px;
+        height: 15px;
+        background: #00e676;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    #enemy {
+        width: 40px;
+        height: 40px;
+        background: red;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    #gameOver {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 30px;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        background: #00e676;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="score">Score: 0</div>
+<div id="player"></div>
+<div id="enemy"></div>
+
+<div id="gameOver">
+    <div>💀 Game Over</div>
+    <button onclick="location.reload()">Restart</button>
+</div>
+
+<script>
+    const player = document.getElementById("player");
+    const enemy = document.getElementById("enemy");
+    const scoreText = document.getElementById("score");
+    const gameOverScreen = document.getElementById("gameOver");
+
+    let mouseX = 0, mouseY = 0;
+    let enemyX = 200, enemyY = 200;
+    let speed = 1.5;
+    let score = 0;
+    let gameRunning = true;
+
+    document.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        player.style.left = mouseX + "px";
+        player.style.top = mouseY + "px";
+    });
+
+    function gameLoop() {
+        if (!gameRunning) return;
+
+        let dx = mouseX - enemyX;
+        let dy = mouseY - enemyY;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+
+        enemyX += dx / distance * speed;
+        enemyY += dy / distance * speed;
+
+        enemy.style.left = enemyX + "px";
+        enemy.style.top = enemyY + "px";
+
+        if (distance < 25) {
+            gameRunning = false;
+            gameOverScreen.style.display = "flex";
+        }
+
+        score++;
+        scoreText.innerText = "Score: " + score;
+
+        if (score % 500 === 0) speed += 0.5;
+
+        requestAnimationFrame(gameLoop);
+    }
+
+    gameLoop();
+</script>
+
+</body>
+</html>

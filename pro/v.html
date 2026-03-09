@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Application Form</title>
+        <link rel="stylesheet" href="style2.css">
+    </head>
+    <body>
+        <h1>Application Form</h1>
+        <br>
+        <div class="form-body">
+            <form>
+
+                <fieldset>
+                    <br>
+                    <legend>Personal Details</legend>
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name" autofocus>
+                    <br>
+                    <label>Email</label>
+                    <input type="email" placeholder="abc@gmail.com">
+                    <br>
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter password" required>
+                    <br>
+                    <label>Mobile Number</label>
+                    <input type="tel" placeholder="Enter mobile number" pattern="[0-9](10)" maxlength="10"> <!--0-9 digits only can be used and total of 10 digits are allowed-->
+                    <br>
+                    <label>Date Of Birth</label>
+                    <input type="date">
+                    <br>
+                    <label>Age</label>
+                    <input type="number" placeholder="Age" min="13" max="60">
+                </fieldset>
+
+                <br><br>
+
+                <fieldset>
+                    <legend>Academic Details</legend>
+                    <br>
+                    <label>Course</label>
+                    <select required>
+                        <option value="">Select</option>
+                        <option>Prompt Engineering</option>
+                        <option>Generative AI</option>
+                        <option>Machine Learning</option>
+                        <option>Deep Learning</option>
+                        <option>Natural Language Processing</option>
+                    </select>
+                    <br>
+                    <label>Sub Course</label>
+                    <input type="text" list="subcourse">
+                    <datalist id="subcourse">
+                        <option>RAG</option>
+                        <option>Agentic AI</option>
+                        <option>Vector Databases</option>
+                        <option>Embedding</option>
+                        <option>Multi Agent Systems</option>
+                        <option>LLM's </option>
+                    </datalist>
+                    <br>
+                    <label>Percentage</label>
+                    <input type="Range" min="0" max="100">
+                    <input type="number" placeholder="Enter %" min="0" max="100">
+                </fieldset>
+
+                <br><br>
+
+                <fieldset>
+                    <br>
+                    <legend>Preferences</legend>
+                    <label>Gender</label>
+                    <input type="radio"> Female
+                    <input type="radio"> Male
+                    <br>
+                    <label>Languages</label>
+                    <input type="checkbox"> English
+                    <input type="checkbox"> Telugu
+                    <input type="checkbox"> Hindi
+                    <br>
+                    <label>Upload Photo</label>
+                    <input type="file">
+                    <br>
+                    <label>Comments</label><br>
+                    <textarea row="5"></textarea>                    
+                </fieldset>
+
+                <br><br>
+                <button>Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
